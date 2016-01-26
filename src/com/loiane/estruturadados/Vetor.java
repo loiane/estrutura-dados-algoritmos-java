@@ -30,6 +30,11 @@ public class Vetor {
 	}
 	
 	public boolean busca(Object elemento){
+		for (int i=0; i<tamanho ;i++){
+			if (elementos[i].equals(elemento)){
+				return true;
+			}
+		}
 		return false;
 	}
 

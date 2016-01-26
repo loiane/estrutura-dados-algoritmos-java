@@ -13,7 +13,7 @@ public class VetorTeste {
 		Vetor vetor = new Vetor(10);
 		int tamanho = vetor.tamanho();
 		
-		Assert.assertEquals("array criado vazio", 0, tamanho);
+		Assert.assertEquals(0, tamanho);
 	}
 	
 	@Test
@@ -22,6 +22,24 @@ public class VetorTeste {
 		Vetor vetor = new Vetor(10);
 		vetor.adiciona("meu elemento");
 		
-		Assert.assertEquals("array criado vazio", 1, vetor.tamanho());
+		Assert.assertEquals(1, vetor.tamanho());
+	}
+	
+	@Test
+	public void buscaElementoExiste(){
+		Vetor vetor = new Vetor(10);
+		vetor.adiciona("meu elemento");
+		
+		Assert.assertEquals(1, vetor.tamanho());
+		Assert.assertEquals(true, vetor.busca("meu elemento"));
+	}
+	
+	@Test
+	public void buscaElementoNaoExiste(){
+		Vetor vetor = new Vetor(10);
+		vetor.adiciona("meu elemento");
+		
+		Assert.assertEquals(1, vetor.tamanho());
+		Assert.assertEquals(false, vetor.busca("asdfg"));
 	}
 }
