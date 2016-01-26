@@ -13,7 +13,8 @@ public class Vetor {
 	}
 
 	public void adiciona(Object elemento){
-
+		elementos[tamanho] = elemento;
+		tamanho++;
 	}
 
 	public void adiciona(int posicao, Object elemento){
