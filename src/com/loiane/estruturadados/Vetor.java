@@ -1,0 +1,42 @@
+package com.loiane.estruturadados;
+
+import java.util.Arrays;
+
+public class Vetor {
+
+	private Object[] elementos;
+	private int tamanho;
+
+	public Vetor(int capacidade) {
+		elementos = new Object[capacidade];
+		tamanho = 0;
+	}
+
+	public void adiciona(Object elemento){
+
+	}
+
+	public void adiciona(int posicao, Object elemento){
+
+	}
+	
+	public void remove(int posicao){
+
+	}
+	
+	public Object obtem(int posicao){
+		return null;
+	}
+	
+	public boolean busca(Object elemento){
+		return false;
+	}
+
+	public int tamanho(){
+		return tamanho;
+	}
+
+	public String toString(){
+		return Arrays.toString(elementos);
+	}
+}
