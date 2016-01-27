@@ -19,9 +19,7 @@ public class VetorTeste {
 	@Test
 	public void criarVetorVazio(){
 		
-		int tamanho = vetor.tamanho();
-		
-		assertEquals(0, tamanho);
+		assertEquals(0, vetor.tamanho());
 	}
 
 	
