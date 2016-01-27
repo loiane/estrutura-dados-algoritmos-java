@@ -1,45 +1,49 @@
 package com.loiane.estruturadados.teste;
 
-import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 import com.loiane.estruturadados.Vetor;
 
 public class VetorTeste {
-
-	@Test
-	public void criarVetorVazio(){
-		
-		Vetor vetor = new Vetor(10);
-		int tamanho = vetor.tamanho();
-		
-		Assert.assertEquals(0, tamanho);
+	
+	private Vetor vetor;
+	
+	@Before
+	public void executaAntesCadaTeste(){
+		vetor = new Vetor(10);
 	}
 	
 	@Test
+	public void criarVetorVazio(){
+		
+		int tamanho = vetor.tamanho();
+		
+		assertEquals(0, tamanho);
+	}
+
+	
+	@Test
 	public void adicionaFinalVetor(){
-		
-		Vetor vetor = new Vetor(10);
 		vetor.adiciona("meu elemento");
-		
-		Assert.assertEquals(1, vetor.tamanho());
+		assertEquals(1, vetor.tamanho());
 	}
 	
 	@Test
 	public void buscaElementoExiste(){
-		Vetor vetor = new Vetor(10);
 		vetor.adiciona("meu elemento");
 		
-		Assert.assertEquals(1, vetor.tamanho());
-		Assert.assertEquals(true, vetor.busca("meu elemento"));
+		assertEquals(1, vetor.tamanho());
+		assertEquals(true, vetor.busca("meu elemento"));
 	}
 	
 	@Test
 	public void buscaElementoNaoExiste(){
-		Vetor vetor = new Vetor(10);
 		vetor.adiciona("meu elemento");
 		
-		Assert.assertEquals(1, vetor.tamanho());
-		Assert.assertEquals(false, vetor.busca("asdfg"));
+		assertEquals(1, vetor.tamanho());
+		assertEquals(false, vetor.busca("asdfg"));
 	}
 }
