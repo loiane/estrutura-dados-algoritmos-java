@@ -25,8 +25,11 @@ public class Vetor {
 
 	}
 	
-	public Object obtem(int posicao){
-		return null;
+	public Object busca(int posicao){
+		if (!(posicao >= 0 && posicao < tamanho)){
+			throw new IllegalArgumentException("Posicao inválida");
+		}
+		return elementos[posicao];
 	}
 	
 	public boolean busca(Object elemento){

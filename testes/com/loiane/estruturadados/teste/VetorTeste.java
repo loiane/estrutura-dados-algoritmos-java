@@ -1,9 +1,10 @@
 package com.loiane.estruturadados.teste;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
 
 import com.loiane.estruturadados.Vetor;
 
@@ -18,7 +19,6 @@ public class VetorTeste {
 	
 	@Test
 	public void criarVetorVazio(){
-		
 		assertEquals(0, vetor.tamanho());
 	}
 
@@ -43,5 +43,23 @@ public class VetorTeste {
 		
 		assertEquals(1, vetor.tamanho());
 		assertEquals(false, vetor.busca("asdfg"));
+	}
+	
+	@Test
+	public void buscaPosicaoZero(){
+		
+		vetor.adiciona("meu elemento");
+		
+		assertEquals(1, vetor.tamanho());
+		assertNotNull(vetor.busca(0));
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void buscaPosicaoNaoExistente(){
+		
+		vetor.adiciona("meu elemento");
+		
+		assertEquals(1, vetor.tamanho());
+		assertNotNull(vetor.busca(2));
 	}
 }
