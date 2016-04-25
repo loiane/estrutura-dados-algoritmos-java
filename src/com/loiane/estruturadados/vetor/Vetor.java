@@ -99,6 +99,8 @@ public class Vetor {
 		for (int i=posicao; i<this.tamanho-1; i++){
 			this.elementos[i] = this.elementos[i+1];
 		}
+		
+		this.elementos[this.tamanho - 1] = null;
 		this.tamanho--;
 	}
 	
