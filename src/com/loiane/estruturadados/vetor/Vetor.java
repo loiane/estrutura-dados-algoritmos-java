@@ -45,7 +45,7 @@ public class Vetor {
 	//
 	public boolean adiciona(int posicao, String elemento){
 		
-		if (!(posicao >= 0 && posicao < tamanho)){
+		if (!(posicao >= 0 && posicao <= tamanho)){
 			throw new IllegalArgumentException("Posição inválida");
 		}
 		
