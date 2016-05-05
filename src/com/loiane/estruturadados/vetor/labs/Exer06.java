@@ -15,7 +15,7 @@ public class Exer06 {
 		//criar vetor com 20 de capacidade
 		Lista<Contato> lista = new Lista<Contato>(20);
 
-		//criar e adicionar 30 contatos
+		//criar e adicionar X contatos
 		criarContatosDinamicamente(5, lista);
 
 		//criar um menu para que o usuário escolha a opção
