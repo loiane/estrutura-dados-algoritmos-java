@@ -49,6 +49,6 @@ public class Exer06 {
 			index++;
 		}
 		
-		return true;
+		return pilha.estaVazia();
 	}
 }
