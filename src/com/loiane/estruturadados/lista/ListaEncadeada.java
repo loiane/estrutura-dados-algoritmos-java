@@ -18,7 +18,7 @@ public class ListaEncadeada<T> {
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
-        builder.append("ListaEncadeada [inicio=").append(primeira).append("]");
+        builder.append("ListaEncadeada [inicio=").append(inicio).append("]");
         return builder.toString();
     }
 
