@@ -16,5 +16,6 @@ public class ListaEncadeadaTeste {
 
         lista.adiciona(3);
         System.out.println(lista);
+
     }
 }
