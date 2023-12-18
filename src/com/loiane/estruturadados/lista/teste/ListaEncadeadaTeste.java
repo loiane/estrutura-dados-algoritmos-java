@@ -19,5 +19,20 @@ public class ListaEncadeadaTeste {
 
         // lista.limpa();
         // System.out.println(lista);
+
+        // busca por elemento
+        System.out.println("******* busca por elemento ");
+        System.out.println(lista.busca(1));
+        System.out.println(lista.busca(2));
+        System.out.println(lista.busca(3));
+        System.out.println(lista.busca(0));
+
+        // busca por posição
+        System.out.println("******* busca por posição ");
+        System.out.println(lista.buscaPorPosicao(0));
+        System.out.println(lista.buscaPorPosicao(1));
+        System.out.println(lista.buscaPorPosicao(2));
+        // System.out.println(lista.buscaPorPosicao(-1));
+        // System.out.println(lista.buscaPorPosicao(4));
     }
 }
