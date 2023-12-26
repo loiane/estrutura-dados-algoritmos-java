@@ -50,6 +50,21 @@ public class ListaEncadeada<T> {
         }
     }
 
+    public T removeInicio() {
+        if (this.tamanho == 0) {
+            throw new RuntimeException("Lista está vazia.");
+        }
+        T removido = this.inicio.getElemento();
+        this.inicio = this.inicio.getProximo();
+        this.tamanho--;
+
+        if (this.tamanho == 0) {
+            this.ultimo = null;
+        }
+
+        return removido;
+    }
+
     public int getTamanho() {
         return this.tamanho;
     }
