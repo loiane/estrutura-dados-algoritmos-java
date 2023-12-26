@@ -1,5 +1,7 @@
 package com.loiane.estruturadados.lista.teste;
 
+import java.util.LinkedList;
+
 import com.loiane.estruturadados.lista.ListaEncadeada;
 
 public class ListaEncadeadaTeste {
@@ -10,7 +12,30 @@ public class ListaEncadeadaTeste {
         // adicionaPosicao();
         // removeInicio();
         // removeFinal();
-        removePosicao();
+        // removePosicao();
+        testeLinkedList();
+    }
+
+    public static void testeLinkedList() {
+        LinkedList<Integer> lista = new LinkedList<>();
+
+        lista.add(1);
+        lista.addFirst(0);
+        lista.addLast(3);
+
+        System.out.println(lista.contains(1));
+
+        lista.add(2, 2);
+
+        System.out.println(lista);
+
+        lista.remove();
+        System.out.println(lista);
+
+        lista.remove(0);
+        lista.removeFirst();
+        lista.removeLast();
+        System.out.println(lista);
     }
 
     public static void removePosicao() {
