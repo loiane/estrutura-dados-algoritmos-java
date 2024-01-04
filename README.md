@@ -4,6 +4,12 @@
 Playlist: https://www.youtube.com/playlist?list=PLGxZ4Rq3BOBrgumpzz-l8kFMw2DLERdxi
 
 ### Listas de exercícios
-* Exercicios Vetores (Arrays): https://pt2.slideshare.net/loianeg/exercicios-vetores-arrays-estruturas-de-dados-e-algoritmos-com-java
-* Exercicios Pilhas (Stacks): https://pt2.slideshare.net/loianeg/exercicios-pilhas-stacks-estruturas-de-dados-e-algoritmos-com-java
-* Exercicios Filas (Queues): https://pt2.slideshare.net/loianeg/exercicios-filas-queues-estruturas-de-dados-e-algoritmos-com-java
+Os exercícios estão dentro da pasta `exercicios`:
+* [Exercicios Vetores (Arrays)](https://github.com/loiane/estrutura-dados-algoritmos-java/blob/master/exercicios/02-ExerciciosVetoresListas.pdf)
+* [Exercicios Pilhas (Stacks)](https://github.com/loiane/estrutura-dados-algoritmos-java/blob/master/exercicios/03-ExerciciosPilhas.pdf)
+* [Exercicios Filas (Queues)](https://github.com/loiane/estrutura-dados-algoritmos-java/blob/master/exercicios/04-ExerciciosFilas.pdf)
+* [Exercicios Listas (Linked List)](https://github.com/loiane/estrutura-dados-algoritmos-java/blob/master/exercicios/05-ExerciciosListaEncadeada.pdf)
+
+### Certificado
+
+O certificado de participação do curso está disponível para as pessoas que concluíram o curso no portal [https://loiane.training](https://loiane.training/).
