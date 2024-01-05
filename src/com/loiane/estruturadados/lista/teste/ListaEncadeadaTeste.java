@@ -13,6 +13,7 @@ public class ListaEncadeadaTeste {
         // removeInicio();
         // removeFinal();
         // removePosicao();
+        // insereOrdenado()
         testeLinkedList();
     }
 
@@ -35,6 +36,25 @@ public class ListaEncadeadaTeste {
         lista.remove(0);
         lista.removeFirst();
         lista.removeLast();
+        System.out.println(lista);
+    }
+
+    private static void insereOrdenado() {
+        ListaEncadeada<Integer> lista = new ListaEncadeada<>();
+        CompararNumero comparator = new CompararNumero();
+        lista.adicionaOrdenado(5, comparator);
+        System.out.println(lista);
+        lista.adicionaOrdenado(1, comparator);
+        System.out.println(lista);
+        lista.adicionaOrdenado(4, comparator);
+        System.out.println(lista);
+        lista.adicionaOrdenado(2, comparator);
+        System.out.println(lista);
+        lista.adicionaOrdenado(3, comparator);
+        System.out.println(lista);
+        lista.adicionaOrdenado(6, comparator);
+        System.out.println(lista);
+        lista.adicionaOrdenado(5, comparator);
         System.out.println(lista);
     }
 
