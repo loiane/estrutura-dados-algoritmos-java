@@ -1,5 +1,7 @@
 package com.loiane.estruturadados.lista;
 
+import java.util.Comparator;
+
 public class ListaEncadeada<T> {
 
     private No<T> inicio;
@@ -9,6 +11,8 @@ public class ListaEncadeada<T> {
     private final int NAO_ENCONTRADO = -1;
     private final String NAO_EXISTE = "Posição não existe.";
     private final String LISTA_VAZIA = "Lista está vazia.";
+    private static final int MENOR = -1;
+    private static final int IGUAL_MAIOR = 0;
 
     public void adiciona(T elemento) {
         No<T> celula = new No<T>(elemento);
@@ -159,6 +163,50 @@ public class ListaEncadeada<T> {
         }
 
         return NAO_ENCONTRADO;
+    }
+
+    public void adicionaOrdenado(T elemento, Comparator<T> comparator) {
+        if (this.tamanho == 0) { // esta vazia
+            this.adicionaInicio(elemento);
+        } else if (comparator.compare(this.inicio.getElemento(), elemento) >= IGUAL_MAIOR) {
+            this.adicionaInicio(elemento);
+        } else {
+            No<T> atual = this.inicio;
+            while (atual.getProximo() != null
+                    && comparator.compare(atual.getProximo().getElemento(), elemento) == MENOR) {
+                atual = atual.getProximo();
+            }
+            No<T> celula = new No<>(elemento, atual.getProximo());
+            atual.setProximo(celula);
+            this.tamanho++;
+        }
+    }
+
+    @SuppressWarnings("unchecked")
+    public T[] transformaArray() {
+        if (this.tamanho == 0) {
+            return (T[]) new Object[0];
+        }
+        Object[] vetor = new Object[this.tamanho];
+        No<T> atual = this.inicio;
+        for (int i = 0; i < this.tamanho; i++) {
+            vetor[i] = atual.getElemento();
+            atual = atual.getProximo();
+        }
+        return (T[]) vetor;
+    }
+
+    public void inverte() { // reverse
+        No<T> atual = this.inicio;
+        No<T> proximo = null;
+        No<T> anterior = null;
+        while (atual != null) {
+            proximo = atual.getProximo();
+            atual.setProximo(anterior);
+            anterior = atual;
+            atual = proximo;
+        }
+        this.inicio = anterior;
     }
 
     @Override
